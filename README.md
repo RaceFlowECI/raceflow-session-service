@@ -119,6 +119,21 @@ mvn spring-boot:run
 
 ## Endpoints REST
 
+| Metodo | Ruta | Auth | Descripcion |
+|---|---|---|---|
+| `POST` | `/sessions` | JWT | Inicia una nueva sesion de competicion. |
+| `POST` | `/sessions/{id}/finish` | JWT | Finaliza la sesion y calcula el tiempo. |
+| `GET` | `/sessions/user/{userId}` | JWT | Historial de sesiones de un usuario. |
+| `GET` | `/sessions/room/{roomCode}` | JWT | Sesiones de una sala especifica. |
+
+### Ejemplo: iniciar sesion
+```bash
+curl -X POST http://localhost:8084/sessions \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  -d '{"roomCode":"ABC123","userId":"user-uuid"}'
+```
+
 ---
 
 ## Pruebas y calidad
