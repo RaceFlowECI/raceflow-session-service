@@ -86,6 +86,35 @@ raceflow-session-service/
 
 ## Configuracion local
 
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/RaceFlowECI/raceflow-session-service.git
+cd raceflow-session-service
+```
+
+### 2. Compilar
+```bash
+mvn clean install
+```
+
+### 3. Configurar variables de entorno
+```bash
+cp .env.example .env
+```
+```env
+DB_HOST=localhost
+DB_USER=raceflow
+DB_PASSWORD=secret
+RABBITMQ_HOST=localhost
+```
+
+### 4. Ejecutar
+```bash
+mvn spring-boot:run
+```
+> [!TIP]
+> El servicio arranca en `http://localhost:8084`. Requiere PostgreSQL y RabbitMQ.
+
 ---
 
 ## Endpoints REST
