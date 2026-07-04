@@ -57,6 +57,31 @@
 
 ## Estructura del proyecto
 
+```text
+raceflow-session-service/
+├── .github/workflows/
+├── .env.example
+├── .gitignore
+├── Dockerfile
+├── pom.xml
+└── src/main/java/edu/eci/arsw/raceflow/session/
+    ├── SessionApplication.java
+    ├── config/
+    │   └── RabbitMQConfig.java
+    ├── controller/
+    │   └── SessionController.java
+    ├── dto/
+    │   ├── StartSessionRequest.java
+    │   └── SessionResponse.java
+    ├── model/
+    │   └── Session.java
+    ├── repository/
+    │   └── SessionRepository.java
+    └── service/
+        ├── SessionService.java
+        └── SessionEventPublisher.java
+```
+
 ---
 
 ## Configuracion local
