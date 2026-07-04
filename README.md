@@ -137,8 +137,17 @@ curl -X POST http://localhost:8084/sessions \
 ---
 
 ## Pruebas y calidad
+```bash
+mvn test
+mvn clean test jacoco:report
+```
 
 ---
 
 ## CI/CD
 
+| Campo | Valor |
+|---|---|
+| Puerto | 8084 |
+| Plataforma | _por definir_ |
+| Ultima version | ![CI](https://github.com/RaceFlowECI/raceflow-session-service/actions/workflows/ci.yml/badge.svg) |
