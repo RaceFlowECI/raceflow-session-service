@@ -1,5 +1,7 @@
 # RACEFLOW — Session Service
 
+![Build](https://github.com/RaceFlowECI/raceflow-session-service/actions/workflows/build.yml/badge.svg)
+
 > [!IMPORTANT]
 > Este repositorio contiene el **Session Service** de RaceFlow: registro y ciclo de vida de sesiones de competicion.
 
