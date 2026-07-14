@@ -4,13 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Entry point of the Session Service skeleton. Reserved for persisting completed
- * training sessions to durable storage; kept as a placeholder microservice with
- * its metrics scaffolding in place.
+ * Punto de entrada del esqueleto de Session Service. Reservado para persistir sesiones
+ * de entrenamiento completadas en almacenamiento durable; se mantiene como un
+ * microservicio placeholder con su andamiaje de métricas en su lugar.
  */
 @SpringBootApplication
 public class SessionApplication {
-    /** @param args command-line arguments passed to Spring Boot */
+    /** @param args argumentos de línea de comandos pasados a Spring Boot */
     public static void main(String[] args) {
         SpringApplication.run(SessionApplication.class, args);
     }

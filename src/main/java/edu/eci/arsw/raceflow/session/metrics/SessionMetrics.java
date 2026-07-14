@@ -4,14 +4,14 @@ import io.micrometer.core.instrument.*;
 import org.springframework.stereotype.Component;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/** Micrometer counters/timers for session-service, exposed at {@code /actuator/prometheus}. */
+/** Contadores/temporizadores de Micrometer para session-service, expuestos en {@code /actuator/prometheus}. */
 @Component
 public class SessionMetrics {
 
     private final Counter sessionsPersisted;
     private final Timer persistenceLag;
 
-    /** @param registry the Micrometer registry to bind these meters to */
+    /** @param registry el registro de Micrometer al cual asociar estas métricas */
     public SessionMetrics(MeterRegistry registry) {
         this.sessionsPersisted = Counter.builder("raceflow.sessions.persisted")
                 .description("Total sessions persisted to database")
@@ -24,8 +24,8 @@ public class SessionMetrics {
                 .register(registry);
     }
 
-    /** Increments the total sessions-persisted counter. */
+    /** Incrementa el contador total de sesiones persistidas. */
     public void recordSessionPersisted() { sessionsPersisted.increment(); }
-    /** @return the timer used to measure lag between session end and DB persistence (objective &lt; 2s) */
+    /** @return el temporizador usado para medir el retraso entre el fin de sesión y la persistencia en BD (objetivo &lt; 2s) */
     public Timer getPersistenceLag() { return persistenceLag; }
 }
